@@ -1,0 +1,88 @@
+/** @format */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+* {
+	box-sizing: border-box;
+	outline: none;
+	padding: 0;
+	margin: 0;
+	font-family: Montserrat, sans-serif;
+	/* border: solid 1px black; */
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	border: solid 1px black;
+	width: 300px;
+	height: 95%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+h1 {
+	height: 25%;
+	width: 100%;
+	padding: 5px;
+	border: solid 1px black;
+}
+
+.keys {
+	padding: 5px;
+	height: 70%;
+	width: 100%;
+	display: grid;
+	grid-template-rows: 1f 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 3px;
+	grid-template-areas:
+		'ac c b div'
+		'd 8 7 mult'
+		'6 5 4 sous'
+		'3 2 1 add'
+		'0 0 . equal';
+}
+
+/* #9{
+    grid-area:9 ;
+}
+#8{
+    grid-area:8 ;
+}
+#7{
+    grid-area:7 ;
+}
+#6{
+    grid-area:6 ;
+}
+#5{
+    grid-area:5 ;
+}
+#4{
+    grid-area:3 ;
+}
+#2{
+    grid-area:2 ;
+}
+#1{
+    grid-area:1 ;
+}
+#0{
+    grid-area:0 ;
+}
+#dot{
+   grid-area: ;
+} */
+#9 {
+	background-color: rgb(182, 16, 16);
+	grid-area: d;
+}
