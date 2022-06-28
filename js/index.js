@@ -1,4 +1,22 @@
 /** @format */
+const buttons = document.querySelectorAll('input');
 
-const button = document.querySelector('#clear');
-console.log(button.value);
+const scren = document.querySelector('h1');
+
+const operateurs = ['-', '+', '/', '*'];
+
+buttons.forEach((button) => {
+	button.addEventListener('click', (e) => {
+		scren.textContent += e.target.value;
+	});
+});
+
+equal.addEventListener('click', () => {
+	scren.textContent = eval(scren.textContent);
+});
+
+clear.addEventListener('click', () => {
+	scren.textContent = '';
+});
+
+const result = (operation) => {};
