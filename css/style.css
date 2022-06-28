@@ -65,6 +65,7 @@ input{
     border-radius: 100%;
     font-size: x-large;
     cursor: pointer;
+    border: none;
 }
 
 .zero{
