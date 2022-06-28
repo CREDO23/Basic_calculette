@@ -3,8 +3,6 @@ const buttons = document.querySelectorAll('input');
 
 const scren = document.querySelector('h1');
 
-const operateurs = ['-', '+', '/', '*'];
-
 buttons.forEach((button) => {
 	button.addEventListener('click', (e) => {
 		scren.textContent += e.target.value;
@@ -12,11 +10,13 @@ buttons.forEach((button) => {
 });
 
 equal.addEventListener('click', () => {
-	scren.textContent = eval(scren.textContent);
+	scren.textContent = result(scren.textContent);
 });
 
 clear.addEventListener('click', () => {
 	scren.textContent = '';
 });
 
-const result = (operation) => {};
+const result = (str) => {
+	return Function(`return ${str}`)();
+};
