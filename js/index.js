@@ -5,7 +5,7 @@ const scren = document.querySelector('h1');
 
 const regex = /^[\()\*\/\-%.+0-9]{1,10}$/;
 
-const isBeginingByZero = (param) => {
+const trimZero = (param) => {
 	let str = param;
 	while (str[0] == '0' && /[0-9]/.test(str[1])) {
 		str = str.slice(1);
@@ -33,9 +33,9 @@ clear.addEventListener('click', () => {
 });
 
 const result = (str) => {
-	let x = isBeginingByZero(str);
-	if (regex.test(str)) {
-		return Function(`return ${x}`)();
+	let x = trimZero(str);
+	if (regex.test(x)) {
+		return eval(x);
 	}
 };
 
