@@ -3,7 +3,7 @@ const buttons = document.querySelectorAll('input');
 
 const scren = document.querySelector('h1');
 
-const regex = /^[\()\*\/\%-+0-9]{1,10}$/;
+const regex = /^[\()\*\/\-%+0-9]{1,10}$/;
 
 buttons.forEach((button) => {
 	button.addEventListener('click', (e) => {
@@ -22,7 +22,10 @@ const result = (str) => {
 };
 
 equal.addEventListener('click', () => {
-	scren.textContent = isNaN(result(scren.textContent))
-		? 'Nan'
-		: result(scren.textContent);
+	try {
+		result(scren.textContent);
+		scren.textContent = result(scren.textContent);
+	} catch (e) {
+		scren.textContent = 'Nan';
+	}
 });
