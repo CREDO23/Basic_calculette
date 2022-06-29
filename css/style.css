@@ -79,12 +79,12 @@ button {
 	grid-area: zero;
 	border-radius: 50px;
 }
-#clear {
+#clearButton {
 	grid-area: C;
 	background-color: #fff;
 	color: black;
 }
-#del {
+#deleteButton {
 	grid-area: A;
 	background-color: #fff;
 	color: black;
@@ -110,15 +110,16 @@ button {
 	grid-area: sous;
 	background-color: rgb(255, 204, 0);
 }
-#equal {
+#equalButton {
 	grid-area: equal;
 	background-color: rgb(255, 204, 0);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
 	main {
-		width: 100vw;
-		height: 100vh;
+		width: 98vw;
+		height: 98vh;
+		border-radius: 0px;
 	}
 	.scren {
 		height: 35%;
