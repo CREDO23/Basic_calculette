@@ -8,7 +8,10 @@
 	padding: 0;
 	margin: 0;
 	font-family: Montserrat, sans-serif;
-	/* border: solid 1px black; */
+}
+
+.mediumSize {
+	font-size: 14px;
 }
 
 body {
@@ -41,6 +44,7 @@ main {
 	display: flex;
 	align-items: flex-end;
 	justify-content: flex-end;
+	flex-wrap: wrap;
 	overflow: hidden;
 	background-color: rgba(71, 68, 68, 0.418);
 }
