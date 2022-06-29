@@ -29,3 +29,7 @@ equal.addEventListener('click', () => {
 		scren.textContent = 'Nan';
 	}
 });
+
+del.addEventListener('click', () => {
+	scren.textContent = scren.textContent.slice(0, -1);
+});
