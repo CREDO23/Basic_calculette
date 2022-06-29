@@ -114,3 +114,10 @@ button {
 	grid-area: equal;
 	background-color: rgb(255, 204, 0);
 }
+
+@media screen and (max-width: 398px) {
+	main {
+		width: max-content;
+		height: max-content;
+	}
+}
